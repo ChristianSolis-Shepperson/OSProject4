@@ -21,7 +21,10 @@ Waiter::~Waiter()
 	//contains new order
 	//otherwise return contains error
 int Waiter::getNext(ORDER &anOrder){
-	return SUCCESS;
+	if(this->myIO.getNext(anOrder) != SUCCESS){
+		return SUCCESS;
+	}
+	return FAIL;
 }
 
 
@@ -31,9 +34,10 @@ int Waiter::getNext(ORDER &anOrder){
 	//when finished exits loop and signals baker(s) using cv_order_inQ that
 	//it is done using b_WaiterIsFinished
 void Waiter::beWaiter() {
-//	while(myIO){
-//
-//	}
+	ORDER order;
+	while(myIO.getNext(order)){
+		//do SOmething
+	}
 
 }
 
