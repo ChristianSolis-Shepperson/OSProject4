@@ -31,9 +31,9 @@ int Waiter::getNext(ORDER &anOrder){
 	//when finished exits loop and signals baker(s) using cv_order_inQ that
 	//it is done using b_WaiterIsFinished
 void Waiter::beWaiter() {
-	while(myIO){
-
-	}
+//	while(myIO){
+//
+//	}
 
 }
 
